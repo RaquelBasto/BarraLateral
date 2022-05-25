@@ -13,6 +13,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.material.badge.BadgeDrawable;
@@ -25,11 +28,13 @@ import com.google.android.material.navigation.NavigationView;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     //Variables
+    RelativeLayout relativeContainerEcoinfo;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
     Menu menu;
     TextView textView;
+    Button teste;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +44,40 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.nav_view);
         //textView=findViewById(R.id.);
-        //toolbar=findViewById(R.id.toolbar);
+        toolbar=findViewById(R.id.toolbar);
 
         //setSupportActionBar(toolbar);
 
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
         //
+
+        //
+        teste = findViewById(R.id.buttonteste);
+        teste.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,MainDrawerActivity.class);
+                startActivity(intent);
+            }
+        });
+        //
+
+
+        //
+        relativeContainerEcoinfo = findViewById(R.id.relativeContainerEcoinfo);
+        relativeContainerEcoinfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,EcoinfoActivity.class);
+                startActivity(intent);
+
+            }
+        });
+        //
+
+
+
+
 
         Menu menu = navigationView.getMenu();
         menu.findItem(R.id.nav_logout).setVisible(false);

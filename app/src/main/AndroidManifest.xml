@@ -10,6 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BarraLateral">
         <activity
+            android:name=".EcoinfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainDrawerActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main_drawer"
+            android:theme="@style/Theme.BarraLateral.NoActionBar" />
+        <activity
             android:name=".Bus"
             android:exported="false" />
         <activity

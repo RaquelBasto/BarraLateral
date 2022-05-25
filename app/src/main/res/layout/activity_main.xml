@@ -81,6 +81,7 @@
                 app:cardElevation="10dp">
 
                 <RelativeLayout
+                    android:id="@+id/relativeContainerEcoinfo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -229,10 +230,21 @@
             </androidx.cardview.widget.CardView>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
 
-
-
-
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonteste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="88dp"
+                tools:layout_editor_absoluteY="592dp"
+                android:textColor="@color/purple_500"
+                android:text="kkkkkk"/>
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
